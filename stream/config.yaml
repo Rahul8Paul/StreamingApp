@@ -1,0 +1,26 @@
+etl_job:
+  time_gap: 100
+
+read:
+  path: D:\scribble\CAvideos.csv
+
+write:
+  mysql:
+    user_name: admin
+    password: pass
+    host: 127.0.0.1
+    port: 12000
+  data:
+    db: data_db
+    table: data_table
+
+update:
+  mysql:
+    user_name: admin
+    password: pass
+    host: 127.0.0.1
+    port: 12000
+  statistics:
+    db: stat_db
+    table: stat_table
+    cols: [views, likes, dislikes, comment_count]
